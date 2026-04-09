@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy app code
-COPY . .
+COPY app/ .
 
 EXPOSE 8083
 
