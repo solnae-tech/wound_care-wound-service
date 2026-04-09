@@ -31,7 +31,7 @@ def healthcheck() -> dict[str, str]:
 def get_dashboard(user_id: int, db: Session = Depends(get_db)) -> DashboardResponse:
     return get_dashboard_service(user_id, db)    
 
-@router.post("/wounds", response_model=WoundOut, status_code=201)
+@router.post("/wounds",  status_code=201)
 def create_wound(user_id: int, payload: WoundCreate, db: Session = Depends(get_db)):
     return create_wound_service(db, user_id, payload)
 

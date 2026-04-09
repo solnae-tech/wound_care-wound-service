@@ -4,7 +4,7 @@ from pydantic import BaseModel, ConfigDict, Field
     
 
 class WoundCreate(BaseModel):
-    cause: list[str] = ['surgical', 'burn', 'accident', 'other']
+    cause: str = 'surgical or burn or accident or other'
     body_location: str
     body_side: str = "front"
 

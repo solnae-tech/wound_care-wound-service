@@ -24,7 +24,7 @@ def get_dashboard_service(user_id: int, db: Session) -> DashboardResponse:
     )
     alerts: list[DashboardAlert] = []
     wound_cards: list[WoundListItem] = []
-    wound_list = list[WoundListItem] = []
+    wound_list: list[WoundListItem] = []
 
     for wound in wounds:
         if wound.status in ['open', 'healing', 'infected']:
